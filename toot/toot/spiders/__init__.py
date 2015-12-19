@@ -7,11 +7,8 @@ from scrapy.spider import Spider
 from scrapy.selector import Selector
 from toot.items import PlayerItem
 
-
 from scrapy.item import Item, Field
 
-
-  
 class MySpider(Spider):
 	name = 'kickass_spider'
 	allowed_domains = ["wikipedia.org"]
@@ -38,10 +35,8 @@ class MySpider(Spider):
 						print player["position"]
 						if len(num) > 0:
 							player['number'] = num[0]
-							#print player["number"]
+							print player["number"]
 						players.append(player)
-
-						#print player['name']
 				count += 1
 		return players
 
